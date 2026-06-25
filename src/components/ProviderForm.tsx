@@ -36,6 +36,49 @@ export default function ProviderForm() {
     if (currentStep === 1) {
       return formData.edificios && formData.edificios.length > 0;
     }
+
+    if (currentStep === 2) {
+      // Lista de campos que pertenecen al paso de Información de Contacto
+      const contactFields = [
+        'nombreComercial',
+        'contactoVenta',
+        'puestoContacto',
+        'telefono',
+        'celular',
+        'correoContacto'
+      ];
+      
+      // .some() recorre la lista y devuelve true si al menos uno de los campos tiene texto
+      return contactFields.some(field => formData[field] && formData[field].trim() !== '');
+    }
+
+    if (currentStep === 3) {
+      const FiscalFields = [
+        'razonSocial',
+        'rfc',
+        'curp',
+        'domicilioFiscal',
+        'ciudad',
+        'estado',
+        'codigoPostal',
+        'pais',
+        'regimen',
+      ]
+      return FiscalFields.some(field => formData[field] && formData[field].trim() !== '');
+    }
+
+    if (currentStep === 4) {
+      const BankFields = [
+        'nombreCuenta',
+        'banco',
+        'numeroCuenta',
+        'clabe',
+        'moneda',
+        'correoNotificaciones'
+      ]
+      return BankFields.some(field => formData[field] && formData[field].trim() !== '');
+    }
+
     return true; 
   };
 
