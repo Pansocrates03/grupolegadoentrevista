@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+:root {
+  --azul-legado: #4b3621;
+  --azul-legado-light: #2c5282;
+  --beige-corporativo: #f5f2e8;
+  --beige-dark: #e8e0d0;
+  --texto-principal: #2d3748;
+}
+
 body::before {
   content: "";
   position: fixed;

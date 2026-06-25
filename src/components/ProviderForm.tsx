@@ -73,7 +73,7 @@ export default function ProviderForm() {
         <img 
           src="https://adminlegado.com/images/Fotos/gl2.png" 
           alt="Logo Grupo Legado" 
-          className="h-24 sm:h-32 w-auto object-contain drop-shadow-sm" 
+          className="h-18 sm:h-26 w-auto object-contain drop-shadow-sm" 
         />
       </div>
       
@@ -82,13 +82,13 @@ export default function ProviderForm() {
         {/* Barra de progreso */}
         <div className="w-full bg-gray-200 h-2">
           <div 
-            className="bg-indigo-600 h-2 transition-all duration-500 ease-in-out" 
+            className="bg-[#4b3621] h-2 transition-all duration-500 ease-in-out" 
             style={{ width: `${progressPercentage}%` }}
           ></div>
         </div>
 
         <div className="p-8 sm:p-10">
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-2 text-center">
+          <h2 className="text-3xl font-extrabold text-[#4b3621] mb-2 text-center">
             Registro de Proveedor
           </h2>
           <p className="text-center text-gray-500 mb-8">
@@ -115,7 +115,7 @@ export default function ProviderForm() {
                 className={`px-6 py-2 rounded-lg font-medium transition-colors ${
                   currentStep === 1 
                     ? 'text-gray-400 bg-gray-100 cursor-not-allowed' 
-                    : 'text-indigo-600 bg-indigo-50 hover:bg-indigo-100'
+                    : 'text-[#4b3621] bg-[#e8e0d0] hover:bg-[#D5CDBE]'
                 }`}
               >
                 ← Regresar
@@ -129,7 +129,7 @@ export default function ProviderForm() {
                   disabled={!isStepValid()} /* 👈 Deshabilita el botón nativamente */
                   className={`px-6 py-2 rounded-lg font-medium transition-colors shadow-md ${
                     isStepValid()
-                      ? 'text-white bg-indigo-600 hover:bg-indigo-700' /* Estilo Activo */
+                      ? 'text-[#4b3621] bg-[#e8e0d0] hover:bg-[#D5CDBE]' /* Estilo Activo */
                       : 'text-gray-400 bg-gray-300 cursor-not-allowed shadow-none' /* Estilo Inactivo */
                   }`}
                 >
@@ -138,9 +138,9 @@ export default function ProviderForm() {
               ) : (
                 <button
                   type="submit"
-                  className="px-6 py-2 rounded-lg font-medium text-white bg-green-600 hover:bg-green-700 transition-colors shadow-md"
+                  className="px-6 py-2 rounded-lg font-medium text-white bg-[#4b3621] hover:bg-[#60462B] transition-colors shadow-md"
                 >
-                  ✅ Finalizar Registro
+                  Finalizar Registro
                 </button>
               )}
             </div>

@@ -80,7 +80,16 @@ export default function SectionFiles({ onChange, values = {} } : SectionFilesPro
             </div>
             <div className="ml-3 text-sm">
               <span className="font-medium text-gray-700">
-                Acepto el aviso de privacidad y autorizo el tratamiento de mis datos personales *
+                Acepto el{' '}
+                <a 
+                  href="https://adminlegado.com/formulario/aviso-privacidad" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 hover:text-indigo-800 hover:underline transition-colors"
+                >
+                  aviso de privacidad
+                </a>{' '}
+                y autorizo el tratamiento de mis datos personales *
               </span>
             </div>
           </label>
