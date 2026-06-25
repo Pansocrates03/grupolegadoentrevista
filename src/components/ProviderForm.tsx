@@ -64,6 +64,7 @@ export default function ProviderForm() {
         'pais',
         'regimen',
       ]
+      if (formData['rfc'] && formData['rfc'].length < 10) return false; // Validación de RFC
       return FiscalFields.some(field => formData[field] && formData[field].trim() !== '');
     }
 
